@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project03</title>
+  <link
+    rel="icon"
+    type="image/png"
+    size="16x16"
+    href="./img/V2---CMCUNIVERSITY-logo5-png.png"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <!-- Banner -->
+  <section id="banner">
+    <div class="logo">
+      <img
+        src="https://lms.cmc-u.edu.vn/accounts/1/files/102/download?verifier=BeV4CXN2mA2gbKFULNw42sk8ql4fubavsHvSaDOO"
+        alt="Logo"
+        height="1000"
+      />
+      <div class="banner-content">
+        <h1>Hệ thống quản lý sinh viên<span> CMC</span></h1>
+        <!-- Content for the banner -->
+      </div>
+    </div>
+  </section>
+
+  <div class="nav">
+    <ul>
+      <li><a href="#">Trang chủ</a></li>
+      <li><a href="#">Giới thiệu</a></li>
+      <li><a href="#">Xem</a></li>
+      <li><a href="#" onclick="showNhapForm()">Nhập</a></li>
+      <li><a href="#" onclick="showLoginForm()">Đăng nhập</a></li>
+    </ul>
+  </div>
+  <!-- Trong phần HTML -->
+
+  <div class="container">
+    <!-- Form Nhập thông tin sinh viên -->
+    <div id="formNhap" class="form-container" style="display: none">
+      <h2>Nhập thông tin sinh viên</h2>
+      <form id="studentForm">
+        <div class="form-group">
+          <label for="hoTen">Họ và tên:</label>
+          <input
+            type="text"
+            id="hoTen"
+            name="hoTen"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="lop">Lớp:</label>
+          <input
+            type="text"
+            id="lop"
+            name="lop"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="maSV">Mã sinh viên (7 kí tự số):</label>
+          <input
+            type="text"
+            id="maSV"
+            name="maSV"
+            pattern="[0-9]{7}"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="diem">Điểm số:</label>
+          <input
+            type="number"
+            id="diem"
+            name="diem"
+            min="0"
+            max="10"
+            step="0.1"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="namHoc">Năm học:</label>
+          <input
+            type="text"
+            id="namHoc"
+            name="namHoc"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="anhSV">Ảnh sinh viên:</label>
+          <input
+            type="file"
+            id="anhSV"
+            name="anhSV"
+            accept="image/*"
+            class="form-control-file"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Xác nhận</button>
+      </form>
+    </div>
+
+  <section>
+    <div class="footer">
+      <div class="social-btns">
+        <p class="title">Follow Us</p>
+        <div class="icon">
+          <a href="https://www.facebook.com/TruongDaiHocCMC"
+            ><i class="bx bxl-facebook-circle"></i
+          ></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-youtube"></i></a>
+          <a href="#"><i class="bx bxl-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="contact">
+        <p class="title">Contact with us</p>
+        <div class="info">
+          <i class="fa-solid fa-location-dot"> Van Phuc - Ha Dong - Hanoi </i>
+          <i class="fa-solid fa-envelope"> cmcuni@gmail.com </i>
+          <i class="fa-solid fa-phone"> 0949 954 510 </i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/dist/boxicons.js"
+    integrity="sha512-kWH92pHUC/rcjpSMu19lT+H6TlZwZCAftg9AuSw+AVYSdEKSlXXB8o6g12mg5f+Pj5xO40A7ju2ot/VdodCthw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.2.2/esm/ionicons.min.js"
+    integrity="sha512-WsL2r6j6Im3HvCp3uuExL45LhU4qwsS4HgVHgti+k/9zXNQnLqiunaxwNxDl+NsLHryCUyGPBw2IV7mGe1Z7nQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="qlsv.js"></script>
+</body>
+</html>

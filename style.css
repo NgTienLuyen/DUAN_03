@@ -1,0 +1,417 @@
+body {
+  margin: 0;
+  overflow-x: hidden; /* Ẩn thanh cuộn ngang */
+  background: url(img/bann.jpg) no-repeat 0px 0px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+#banner {
+  width: 100%;
+  height: 40px;
+  background-color: #4dd0e7; /* Màu sắc nhẹ nhàng */
+  background: url(img/shutterstock_739595833-min.jpg) no-repeat 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  color: #4a4a4a; /* Màu văn bản */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hiệu ứng mờ */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.banner-content {
+  text-align: center;
+}
+
+.banner-content h1 {
+  width: fit-content;
+  text-transform: uppercase;
+  font-size: 25px;
+  animation: text_reveal 0.5s ease forwards;
+  color: #0b92e0; /* Thay đổi màu chữ */
+}
+
+.banner-content span {
+  animation: text_reveal_name 0.5s ease forwards;
+}
+
+.nav {
+  margin: 0;
+  background-color: #0e5e94; /* Màu sắc nhẹ nhàng cho thanh điều hướng */
+  color: #fff; /* Màu văn bản trắng */
+  padding: 5px 0;
+  border: 1px solid #0e5e94; /* Màu viền giống với màu nền */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hiệu ứng mờ */
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển động */
+  position: relative;
+}
+
+.nav ul li a:hover {
+  color: #262626; /* Thay đổi màu khi hover */
+  font-weight: bold; /* Tăng độ đậm của văn bản */
+}
+
+.nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #008fd5;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav ul a {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: background-color 0.5s ease;
+  border-radius: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.nav ul a:hover {
+  background-color: #26b1c7;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #f5f5f5; /* Màu nền nhẹ nhàng */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hiệu ứng mờ */
+}
+
+.login {
+  margin: 50px auto; /* Loại bỏ margin top và bottom và tự động căn giữa theo chiều ngang */
+  max-width: 400px;
+  padding: 20px;
+  color: #413737;
+  border-radius: 5px;
+  font-size: 20px;
+  display: flex; /* Sử dụng flexbox */
+  flex-direction: column; /* Sắp xếp các thành phần theo chiều dọc */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hiệu ứng mờ */
+}
+
+.login p {
+  font-size: 30px;
+  text-decoration: uppercase;
+  text-align: center;
+}
+
+.login .input-box {
+  width: 100%;
+  height: 50px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.login .input-box input:last-child {
+  font-size: 18px;
+  background: linear-gradient(120deg, #907c60, #ffb041); /* Thay đổi màu nền */
+  cursor: pointer;
+}
+
+.login .input-box input::placeholder {
+  font-size: 15px;
+}
+
+.login .input-box input,
+.login .input-box select {
+  width: 350px;
+  height: 100%;
+  padding: 0 40px 0 15px;
+  font-size: 16px;
+  border: 1px solid #6c4d4d;
+  border-radius: 5px;
+  outline: none;
+}
+
+.login .input-box i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #888;
+}
+
+.login .input-box input[type="submit"] {
+  width: auto;
+  margin: 20px auto; /* Căn giữa theo chiều ngang */
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ffa07a;
+  color: #fff4f4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login .input-box input[type="submit"]:hover {
+  color: #faab81;
+}
+
+.login .input-box select {
+  text-align-last: center;
+}
+
+.footer {
+  width: 100%;
+  height: 70px;
+  background-color: #008fd5; /* Màu sắc nhẹ nhàng */
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #008fd5; /* Màu viền giống với màu nền */
+
+  box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng nổi khối */
+}
+
+.footer .social-btns {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer.social-btns {
+  position: relative; /* Sử dụng định vị tương đối cho các phần tử con */
+  top: 50%; /* Đưa các phần tử con về giữa footer */
+  transform: translateY(-50%);
+}
+
+.footer .title {
+  font-size: 18px;
+  color: #2e2d2d;
+}
+
+.footer .icon {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .icon a {
+  width: 40%;
+  font-size: 25px;
+  margin: 10px;
+  transition: transform 0.3s ease; /* Thêm hiệu ứng transform */
+}
+
+.footer .icon a:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2); /* Phóng to biểu tượng khi di chuột qua */
+}
+
+.footer .contact {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .info {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 5px;
+  align-items: center;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+.footer .info i:hover {
+  transform: scale(1.2); /* Phóng to biểu tượng khi di chuột qua */
+}
+.footer .info i {
+  margin: 0 5px; /* Tạo khoảng cách nhỏ giữa các biểu tượng */
+}
+@media (max-width: 768px) {
+  .banner {
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* CSS cho form nhập thông tin sinh viên */
+.form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(119, 199, 231, 0.8); /* Màu nền trong suốt */
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333; /* Màu chữ */
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333; /* Màu chữ */
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="file"] {
+  width: calc(100% - 20px);
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Chỉnh sửa cho nút "Chọn tệp" và "Xác nhận" */
+.form-group input[type="file"],
+.form-group input[type="submit"] {
+  width: 100%;
+  height: 45px;
+  background-color: #008fd5; /* Màu nền */
+  color: #fff; /* Màu chữ */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease; /* Hiệu ứng hover */
+}
+
+/* Hover effect cho nút "Chọn tệp" và "Xác nhận" */
+.form-group input[type="file"]:hover,
+.form-group input[type="submit"]:hover {
+  background-color: #005f85; /* Màu nền hover */
+}
+
+/* Hover effect cho nút "Xác nhận" */
+.form-group input[type="submit"]:hover {
+  background-color: #005f85; /* Màu nền hover */
+}
+
+/* Phần css của form khi ấn đăng nhập*/
+/* CSS cho form đăng nhập */
+#formLogin {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#formLogin h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#formLogin .form-group {
+  margin-bottom: 20px;
+}
+
+#formLogin .form-group label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+#formLogin .form-group input[type="text"],
+#formLogin .form-group input[type="password"] {
+  width: calc(100% - 40px);
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+#formLogin .form-group input[type="submit"] {
+  width: 100%;
+  height: 40px;
+  background-color: #008fd5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#formLogin .form-group input[type="submit"]:hover {
+  background-color: #005f85;
+}
+
+#formLogin .form-group input[type="text"]:focus,
+#formLogin .form-group input[type="password"]:focus {
+  border-color: #008fd5;
+}
+
+#formLogin .form-group input[type="submit"]:hover {
+  background-color: #005f85;
+  transition: background-color 0.3s ease-in-out;
+}
